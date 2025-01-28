@@ -26,6 +26,19 @@
             font-weight: 600;
         }
 
+        /* Header Section */
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .company-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #4a90e2, #50a3a1); /* Modern gradient */
@@ -197,7 +210,7 @@
         }
 
         /* Footer Section */
-        .footer {
+        footer {
             background-color: #333;
             color: white;
             text-align: center;
@@ -205,8 +218,14 @@
             font-size: 1rem;
         }
 
-        .footer p {
-            margin: 0;
+        footer .footer-address {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        footer .footer-contact {
+            font-size: 1.1rem;
+            margin-top: 10px;
         }
 
         /* Responsive Design */
@@ -288,13 +307,20 @@
                 font-size: 0.9rem;
             }
 
-            .footer {
+            footer {
                 font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="company-name">
+            GLODO
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -348,8 +374,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Glodo Visa Consultation Service. All Rights Reserved.</p>
+    <footer>
+        <p>&copy; 2025 GLODO Visa Consultation Service. All Rights Reserved.</p>
+        <div class="footer-address">
+            <p>1234 Visa Street, City, Country</p>
+        </div>
+        <div class="footer-contact">
+            <p>Contact: +123 456 7890</p>
+        </div>
     </footer>
 
 </body>
