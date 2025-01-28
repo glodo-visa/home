@@ -54,27 +54,20 @@
             margin-bottom: 30px;
         }
 
-        .cta-btn {
-            font-size: 1.1rem;
-            padding: 12px 30px;
-            background-color: #00aaff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background-color: #0088cc;
-        }
-
         /* Contact Section (Icons) */
         .contact-section {
             display: flex;
             justify-content: center;
             gap: 30px;
             margin-top: 30px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .contact-section a {
@@ -267,11 +260,11 @@
     <section class="hero">
         <h1>Visa Consultation & Flight Booking</h1>
         <p>Your trusted partner for all visa-related services and flight bookings.</p>
-        <button class="cta-btn">Get Started</button>
     </section>
 
     <!-- Contact Section (Icons) -->
     <section class="contact-section">
+        <h2>Contact Us</h2>
         <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
         <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="mailto:info@glodo.in"><i class="fas fa-envelope"></i></a>
