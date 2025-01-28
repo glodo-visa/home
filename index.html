@@ -3,249 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist Download</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        form {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Two-column layout for larger screens */
-        .two-column-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .two-column-form label {
-            margin-bottom: 5px;
-        }
-
-        .two-column-form select {
-            width: 100%;
-        }
-
-        #result {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        #downloadLink {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        #noChecklistMessage {
-            color: red;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .two-column-form {
-                grid-template-columns: 1fr; /* Stack the columns on smaller screens */
-            }
-
-            input[type="submit"] {
-                width: 100%; /* Make the submit button span full width */
-            }
-        }
-
-        /* Further responsiveness for very small screens */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 20px; /* Smaller title on smaller devices */
-            }
-
-            form {
-                padding: 15px; /* Reduce padding on smaller screens */
-            }
-
-            label {
-                font-size: 14px; /* Smaller label text */
-            }
-
-            select, input[type="submit"] {
-                font-size: 14px; /* Smaller font for selects and submit button */
-            }
-        }
-    </style>
-    <script>
-        // Function to fetch checklist data from Google Sheets through the Apps Script Web App
-        function fetchChecklistData() {
-            const apiUrl = 'https://script.google.com/macros/s/AKfycbw3jzuUp7je0s88G_BhEwF2o6JUgjJCetMcZGBLAJ19X_6BZCwEiVkiVBpR5OAYcBqh/exec'; // Your Web App URL
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    checklistData = data;  // Store the fetched data for comparison
-                    console.log('Checklist Data Loaded:', checklistData);
-                })
-                .catch(error => console.error('Error loading checklist data:', error));
-        }
-
-        // Function to populate dropdowns with predefined options
-        function populateDropdowns() {
-            const dropdownData = {
-                destination: ['USA', 'Canada', 'Germany', 'France'],
-                nationality: ['US', 'India', 'UK', 'Canada'],
-                residenceCountry: ['USA', 'India', 'UK', 'Australia'],
-                occupation: ['Engineer', 'Doctor', 'Teacher', 'Artist'],
-                purpose: ['Business', 'Tourism', 'Study', 'Medical'],
-                visaHolding: ['USA', 'Canada', 'Germany', 'France']
-            };
-
-            // Populate each dropdown with options
-            for (const key in dropdownData) {
-                const dropdown = document.getElementById(key);
-                dropdownData[key].forEach(optionText => {
-                    const option = document.createElement('option');
-                    option.value = optionText;
-                    option.innerHTML = optionText;
-                    dropdown.appendChild(option);
-                });
-            }
-        }
-
-        // Function to handle form submission and show checklist download link based on selected criteria
-        function showDownloadLink() {
-            const destination = document.getElementById("destination").value.trim().toLowerCase();
-            const nationality = document.getElementById("nationality").value.trim().toLowerCase();
-            const residenceCountry = document.getElementById("residenceCountry").value.trim().toLowerCase();
-            const occupation = document.getElementById("occupation").value.trim().toLowerCase();
-            const purpose = document.getElementById("purpose").value.trim().toLowerCase();
-            const visaHolding = document.getElementById("visaHolding").value.trim().toLowerCase();
-
-            // Hide the download link and message initially
-            document.getElementById("downloadLink").style.display = "none";
-            document.getElementById("noChecklistMessage").style.display = "none";
-
-            let found = false;
-
-            // Check the selected criteria against the fetched data
-            checklistData.forEach(row => {
-                if (row.destination.toLowerCase() === destination && 
-                    row.nationality.toLowerCase() === nationality &&
-                    row.residenceCountry.toLowerCase() === residenceCountry &&
-                    row.occupation.toLowerCase() === occupation &&
-                    row.purpose.toLowerCase() === purpose &&
-                    row.visaHolding.toLowerCase() === visaHolding) {
-                    found = true;
-                    document.getElementById("downloadLink").style.display = "block";
-                    document.getElementById("downloadLink").innerHTML = `<a href="${row.downloadLink}" target="_blank">Download the Checklist</a>`;
-                }
-            });
-
-            // If no match is found, show the "No checklist file found" message
-            if (!found) {
-                document.getElementById("noChecklistMessage").style.display = "block";
-            }
-        }
-
-        // Call fetchChecklistData when the page loads to load the checklist data
-        window.onload = function() {
-            fetchChecklistData();
-            populateDropdowns();
-        };
-    </script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visa Consultation Service</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Checklist Download</h1>
-    <form onsubmit="event.preventDefault(); showDownloadLink();">
-        <div class="two-column-form">
-            <div>
-                <label for="destination">Destination: </label>
-                <select id="destination" required>
-                    <option value="">Select Destination</option>
-                </select>
-            </div>
-            <div>
-                <label for="nationality">Nationality: </label>
-                <select id="nationality" required>
-                    <option value="">Select Nationality</option>
-                </select>
-            </div>
-            <div>
-                <label for="residenceCountry">Residence Country: </label>
-                <select id="residenceCountry" required>
-                    <option value="">Select Residence Country</option>
-                </select>
-            </div>
-            <div>
-                <label for="occupation">Occupation: </label>
-                <select id="occupation" required>
-                    <option value="">Select Occupation</option>
-                </select>
-            </div>
-            <div>
-                <label for="purpose">Purpose of Visit: </label>
-                <select id="purpose" required>
-                    <option value="">Select Purpose</option>
-                </select>
-            </div>
-            <div>
-                <label for="visaHolding">Visa Holding: </label>
-                <select id="visaHolding" required>
-                    <option value="">Select Visa Status</option>
-                </select>
-            </div>
-        </div>
-        <input type="submit" value="Download">
-    </form>
 
-    <h2 id="result"></h2>
-    <div id="downloadLink" style="display:none;"></div>
-    <div id="noChecklistMessage" style="display:none; color: red; font-weight: bold;">
-        No checklist file found for the selected criteria.
-    </div>
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Visa Consultation & Flight Booking Services</h1>
+            <p>Your trusted partner for visa processing and travel bookings.</p>
+            <a href="#contact" class="cta-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <h3>Visa Consultation</h3>
+            <p>Get expert guidance and support for all types of visa applications, from tourist visas to business visas.</p>
+        </div>
+        <div class="service-card">
+            <h3>Flight Ticket Booking</h3>
+            <p>We help you find the best flight deals and book tickets at the most competitive prices.</p>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <h2>Useful Tools</h2>
+        <p>We provide essential tools to make your travel experience smoother.</p>
+        <ul>
+            <li><a href="https://link-to-your-checklist.com" target="_blank">Download Checklist</a></li>
+            <!-- Add more tool links here -->
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p>Need assistance? Reach out to our team for personalized help with visa consultation and travel bookings.</p>
+        <a href="mailto:info@glodo.in" class="cta-btn">Email Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Glodo Visa Consultation Service. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
