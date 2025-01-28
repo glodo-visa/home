@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Visa Consultation Service</title>
     <style>
-        /* Reset and Global Styles */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -14,15 +14,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fb;
             color: #333;
             line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
         }
 
         h1, h2, h3 {
@@ -30,18 +25,17 @@
             font-weight: 600;
         }
 
-        /* Header Section */
+        /* Hero Section */
         .hero {
-            background: url('https://via.placeholder.com/1500x700') no-repeat center center/cover;
+            background: #006a8e;
             color: white;
-            padding: 120px 20px;
             text-align: center;
-            position: relative;
+            padding: 80px 20px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
 
         .hero p {
@@ -50,57 +44,64 @@
         }
 
         .cta-btn {
-            background-color: #ff6f61;
-            padding: 15px 30px;
+            background-color: #ff5c5c;
+            padding: 12px 30px;
             font-size: 1.1rem;
             border-radius: 30px;
             color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
             transition: background-color 0.3s ease;
         }
 
         .cta-btn:hover {
-            background-color: #e55649;
+            background-color: #e74c3c;
         }
 
-        /* Services Section */
+        /* Service Section */
         .services {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 60px 20px;
-            background-color: white;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .services .service {
-            width: 48%;
+        .service {
             background-color: #fff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            width: 48%;
             padding: 30px;
-            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .services .service:hover {
+        .service:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .services .service h3 {
+        .service h3 {
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .services .service p {
+        .service p {
             font-size: 1.1rem;
             color: #555;
         }
 
         /* Tools Section */
         .tools {
+            background-color: #fff;
             text-align: center;
             padding: 60px 20px;
-            background-color: #f9f9f9;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            margin: 50px auto;
+            max-width: 1200px;
         }
 
         .tools h2 {
@@ -111,28 +112,27 @@
         .tools ul {
             list-style: none;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
         }
 
         .tools li {
+            display: inline-block;
+            margin: 10px 20px;
             font-size: 1.2rem;
         }
 
         .tools a {
-            color: #ff6f61;
+            color: #006a8e;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .tools a:hover {
-            color: #e55649;
+            color: #ff5c5c;
         }
 
         /* Contact Section */
         .contact {
-            background-color: #fff;
+            background-color: #f9fafb;
             padding: 60px 20px;
             text-align: center;
         }
@@ -147,7 +147,7 @@
             margin-bottom: 30px;
         }
 
-        /* Footer */
+        /* Footer Section */
         .footer {
             background-color: #333;
             color: white;
@@ -163,40 +163,38 @@
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Visa Consultation & Flight Booking Services</h1>
-            <p>Your trusted partner for visa processing and travel bookings.</p>
-            <a href="#contact" class="cta-btn">Contact Us</a>
-        </div>
-    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Visa Consultation & Flight Booking</h1>
+        <p>Your trusted partner for all visa-related services and flight bookings.</p>
+        <a href="#contact" class="cta-btn">Get Started</a>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="service">
             <h3>Visa Consultation</h3>
-            <p>Expert guidance and support for all types of visa applications, from tourist visas to business visas.</p>
+            <p>Receive expert advice for all visa types, from tourist visas to work visas. Let us guide you through every step of the process.</p>
         </div>
         <div class="service">
             <h3>Flight Ticket Booking</h3>
-            <p>We help you find the best flight deals and book tickets at the most competitive prices.</p>
+            <p>We help you book flights at the best prices, with a variety of options to suit your travel needs.</p>
         </div>
     </section>
 
     <!-- Tools Section -->
     <section id="tools" class="tools">
-        <h2>Useful Tools</h2>
+        <h2>Helpful Tools</h2>
         <ul>
-            <li><a href="https://link-to-your-checklist.com" target="_blank">Download Checklist</a></li>
-            <!-- Add more tool links here -->
+            <li><a href="https://link-to-your-checklist.com" target="_blank">Visa Checklist Downloader</a></li>
+            <!-- Add more tools if needed -->
         </ul>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <p>Need assistance? Reach out to our team for personalized help with visa consultation and travel bookings.</p>
+        <h2>Contact Us</h2>
+        <p>Have questions? Our team is ready to help with visa applications, flight bookings, and more. Reach out to us today!</p>
         <a href="mailto:info@glodo.in" class="cta-btn">Email Us</a>
     </section>
 
