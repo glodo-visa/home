@@ -26,6 +26,38 @@
             font-weight: 600;
         }
 
+        /* Contact Section (Top) */
+        .contact-top {
+            background-color: #50a3a1; /* Subtle greenish blue */
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .contact-top h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-top p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-top a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            padding: 12px 25px;
+            background-color: #ff5c5c;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-top a:hover {
+            background-color: #e74c3c;
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #4a90e2, #50a3a1); /* Modern gradient */
@@ -57,7 +89,6 @@
             color: white;
             font-size: 2rem;
             padding: 12px;
-            background-color: #ff5c5c; /* Slightly pink for a soft look */
             border-radius: 50%;
             transition: background-color 0.3s ease;
         }
@@ -142,19 +173,19 @@
             color: #ff5c5c;
         }
 
-        /* Contact Section */
-        .contact {
+        /* Contact Section (Bottom) */
+        .contact-bottom {
             background-color: #f9fafb;
             padding: 60px 20px;
             text-align: center;
         }
 
-        .contact h2 {
+        .contact-bottom h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
 
-        .contact p {
+        .contact-bottom p {
             font-size: 1.2rem;
             margin-bottom: 30px;
         }
@@ -259,12 +290,19 @@
 </head>
 <body>
 
+    <!-- Contact Section (Top) -->
+    <section class="contact-top">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for any visa, flight booking, or consultation-related queries.</p>
+        <a href="mailto:info@glodo.in">Contact Us</a>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero">
         <h1>Visa Consultation & Flight Booking</h1>
         <p>Your trusted partner for all visa-related services and flight bookings.</p>
 
-        <!-- Contact Us Icons -->
+        <!-- Contact Links (Only Icons) -->
         <div class="contact-links">
             <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
             <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -293,11 +331,15 @@
         </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact Section (Bottom) -->
+    <section class="contact-bottom">
         <h2>Contact Us</h2>
         <p>Have questions? Our team is ready to help with visa applications, flight bookings, and more. Reach out to us today!</p>
-        <a href="mailto:info@glodo.in" class="cta-btn">Email Us</a>
+        <div class="contact-links">
+            <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:info@glodo.in"><i class="fas fa-envelope"></i></a>
+        </div>
     </section>
 
     <!-- Footer -->
