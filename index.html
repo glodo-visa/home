@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Visa Consultation Service</title>
+    <title>GLODO Visa Services</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         /* General Reset */
@@ -15,8 +15,8 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f7fb;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
         }
@@ -30,28 +30,22 @@
         .header-logo {
             font-family: 'Arial', sans-serif;
             font-weight: bold;
-            font-size: 2.5rem;
-            color: #4a90e2; /* Modern blue shade for a professional look */
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-size: 3rem;
+            color: #007BFF; /* A cleaner blue color */
             text-align: center;
-            padding-top: 20px;
-        }
-
-        .header-logo span {
-            color: #50a3a1; /* Complementary color for "Visa" or accent part */
+            margin: 30px 0;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #4a90e2, #50a3a1); /* Modern gradient */
+            background-color: #007BFF;
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 15px;
         }
 
@@ -60,63 +54,38 @@
             margin-bottom: 30px;
         }
 
-        /* Contact Us Title & Icons */
+        .cta-btn {
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #0088cc;
+        }
+
+        /* Contact Section (Icons) */
         .contact-section {
-            margin-top: 20px; /* Further reduced space */
-        }
-
-        .contact-section h2 {
-            font-size: 2rem;
-            margin-bottom: 5px; /* Reduced margin */
-            font-weight: bold;
-        }
-
-        .contact-links {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 10px;
+            margin-top: 30px;
         }
 
-        .contact-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 2.5rem; /* Increased icon size */
-            padding: 15px;
-            border-radius: 50%;
+        .contact-section a {
+            color: #007BFF;
+            font-size: 2rem;
             transition: transform 0.3s ease;
         }
 
-        /* Hover Effect: Rotate the icon */
-        .contact-links a:hover {
-            transform: rotate(15deg); /* Rotate the icon */
-        }
-
-        /* Bounce animation on click */
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-            30% {
-                transform: translateY(-10px);
-            }
-            50% {
-                transform: translateY(0);
-            }
-            70% {
-                transform: translateY(-5px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .contact-links a:active {
-            animation: bounce 0.4s ease; /* Applying bounce animation */
-        }
-
-        .contact-links a i {
-            margin: 0;
+        /* Hover effect */
+        .contact-section a:hover {
+            transform: scale(1.1);
         }
 
         /* Service Section */
@@ -127,7 +96,7 @@
             padding: 60px 20px;
             gap: 20px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 50px auto;
             flex-wrap: wrap;
         }
 
@@ -153,6 +122,27 @@
         .service p {
             font-size: 1.1rem;
             color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f1f1f1;
+            color: #333;
+            text-align: center;
+            padding: 30px;
+            font-size: 1rem;
+        }
+
+        .footer-logo {
+            font-family: 'Arial', sans-serif;
+            font-weight: normal;
+            font-size: 2rem;
+            color: #007BFF;
+        }
+
+        .footer p {
+            margin-top: 10px;
+            font-size: 1rem;
         }
 
         /* Tools Section */
@@ -182,60 +172,13 @@
         }
 
         .tools a {
-            color: #006a8e;
+            color: #007BFF;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .tools a:hover {
             color: #ff5c5c;
-        }
-
-        /* Contact Section (Bottom) */
-        .contact-bottom {
-            background-color: #f9fafb;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .contact-bottom h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-bottom p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .contact-bottom .contact-links a {
-            color: #ff5c5c; /* Updated color for better visibility */
-        }
-
-        /* Footer Section */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 1rem;
-        }
-
-        .footer-logo {
-            font-family: 'Arial', sans-serif;
-            font-weight: normal;
-            font-size: 1.5rem;
-            color: #333;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .footer-logo span {
-            color: #4a90e2; /* Accent color for "Visa" in footer */
-        }
-
-        .footer p {
-            margin: 0;
         }
 
         /* Responsive Design */
@@ -273,12 +216,8 @@
                 margin: 15px 0;
             }
 
-            .contact h2 {
-                font-size: 2rem;
-            }
-
-            .contact p {
-                font-size: 1rem;
+            .footer-logo {
+                font-size: 1.5rem;
             }
         }
 
@@ -309,14 +248,6 @@
                 font-size: 1rem;
             }
 
-            .contact h2 {
-                font-size: 1.8rem;
-            }
-
-            .contact p {
-                font-size: 0.9rem;
-            }
-
             .footer {
                 font-size: 0.9rem;
             }
@@ -328,7 +259,7 @@
     <!-- Header Logo -->
     <header>
         <div class="header-logo">
-            Glodo <span>Visa</span>
+            GLODO
         </div>
     </header>
 
@@ -336,21 +267,18 @@
     <section class="hero">
         <h1>Visa Consultation & Flight Booking</h1>
         <p>Your trusted partner for all visa-related services and flight bookings.</p>
+        <button class="cta-btn">Get Started</button>
+    </section>
 
-        <!-- Contact Us Title & Icons Grouped -->
-        <div class="contact-section">
-            <h2>Contact Us</h2>
-            <!-- Contact Links (Only Icons) -->
-            <div class="contact-links">
-                <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
-                <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:info@glodo.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
+    <!-- Contact Section (Icons) -->
+    <section class="contact-section">
+        <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:info@glodo.in"><i class="fas fa-envelope"></i></a>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section class="services">
         <div class="service">
             <h3>Visa Consultation</h3>
             <p>Receive expert advice for all visa types, from tourist visas to work visas. Let us guide you through every step of the process.</p>
@@ -362,33 +290,19 @@
     </section>
 
     <!-- Tools Section -->
-    <section id="tools" class="tools">
+    <section class="tools">
         <h2>Helpful Tools</h2>
         <ul>
             <li><a href="https://checklist.glodo.in/" target="_self">Visa Checklist Downloader</a></li>
-            <!-- Add more tools if needed -->
         </ul>
-    </section>
-
-    <!-- Contact Section (Bottom) -->
-    <section class="contact-bottom">
-        <h2>Contact Us</h2>
-        <p>Have questions? Our team is ready to help with visa applications, flight bookings, and more. Reach out to us today!</p>
-        
-        <!-- Contact Links (Only Icons) -->
-        <div class="contact-links">
-            <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
-            <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:info@glodo.in"><i class="fas fa-envelope"></i></a>
-        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-logo">
-            Glodo <span>Visa</span> Consultation Service
+            GLODO
         </div>
-        <p>&copy; 2025 Glodo Visa Consultation Service. All Rights Reserved.</p>
+        <p>&copy; 2025 GLODO Visa Services. All Rights Reserved.</p>
     </footer>
 
 </body>
