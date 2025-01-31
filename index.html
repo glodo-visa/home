@@ -67,6 +67,18 @@
             line-height: 1.6;
             color: #666;
         }
+        .more-details-link, .enquire-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #4A90E2;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .more-details-link:hover, .enquire-link:hover {
+            color: #333;
+            transform: translateY(-3px);
+        }
         .link-style {
             font-size: 1.2rem;
             color: #4A90E2;
@@ -187,17 +199,19 @@
             <div class="service-box">
                 <h3>Visa Consultation</h3>
                 <p>Get expert guidance and assistance with your visa application process for any destination around the world.</p>
+                <a href="https://visa.glodo.in" class="more-details-link">More details</a>
             </div>
             <div class="service-box">
                 <h3>Flight Ticket Booking</h3>
                 <p>Book affordable flights easily with our user-friendly platform and enjoy a smooth travel experience.</p>
+                <a href="#" class="enquire-link">Enquire Now</a>
             </div>
         </div>
 
         <!-- New Free Tools Section -->
         <div class="free-tools">
             <h3>Free Tools</h3>
-            <a href="https://checklist.glodo.in">Checklist Checker</a>
+            <a href="https://checklist.glodo.in" class="link-style">Checklist Checker</a>
         </div>
 
         <!-- New Contact and Address Section -->
